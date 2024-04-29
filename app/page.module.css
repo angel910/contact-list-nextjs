@@ -5,6 +5,9 @@
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
+  .addContactBtn {
+    margin: 20px;
+  }
 }
 
 .description {
@@ -227,3 +230,4 @@
     transform: rotate(0deg);
   }
 }
+

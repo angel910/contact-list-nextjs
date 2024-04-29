@@ -3,8 +3,9 @@ import React from "react";
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { useRouter } from "next/navigation";
+import { Contact } from "../models/contacts/contact.models";
 
-export const ContactsList = ({ contacts }) => {
+export const ContactsList = ( contacts: Contact[] ) => {
 
   const router = useRouter()
 

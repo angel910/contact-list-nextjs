@@ -1,3 +1,5 @@
+import { Contact } from "../models/contacts/contact.models";
+
 export const contactsApi = {
   "contacts": [
     {
@@ -206,12 +208,12 @@ export const contactsApi = {
     return this.contacts
   },
   
-  addContact: function (contact) {
+  addContact: function (contact: Contact) {
       this.contacts.unshift(contact)
   },
 
-  get: function (id) {
-    const isContact = (c) => c.id === id;
+  get: function (id: string) {
+    const isContact = (c: Contact) => c.id === id;
 		return this.contacts.find(isContact); 
   },
 }

@@ -5,13 +5,14 @@ import { contactsApi } from '../components/ContactsApi'
 import { SearchBar } from '../components/SearchBar'
 import { useState } from 'react'
 import { NewContactButton } from '../components/NewContactButton'
+import { Contact } from '../models/contacts/contact.models'
 
 
 export default function Contacts() {
   const [contacts, _] = useState(contactsApi.all())
   const [filteredContacts, setFilteredContacts] = useState(contactsApi.all())
 
-  const contactsSearch = (term) => {
+  const contactsSearch = (term: string) => {
     // setFilteredCOntacts to what's returned from the filter
 
     if (!term.length) {
@@ -23,7 +24,7 @@ export default function Contacts() {
 
     const lowerCaseSearchTerm = term.toLowerCase()
 
-    const foundContacts = contacts.filter((contact) => {
+    const foundContacts = contacts.filter((contact: Contact) => {
       const fullName = `${contact.first_name} ${contact.last_name}`
 
       return fullName.toLowerCase().includes(lowerCaseSearchTerm)

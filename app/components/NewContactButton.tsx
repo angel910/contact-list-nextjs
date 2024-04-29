@@ -10,9 +10,11 @@ export function NewContactButton() {
   
   return (
     <>
+      <div  className='addContactBtn' style={{margin: '8px'}}>
       <Button variant="primary" onClick={handleNewContactClick}>
         Add Contact
       </Button>
+      </div>
     </>
   );
 }
